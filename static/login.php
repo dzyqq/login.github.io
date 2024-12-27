@@ -21,7 +21,7 @@ $user_password = $_POST['password'] ?? '';
 
 // 表单验证
 if (empty($user_name) || empty($user_password)) {
-    header("Location: login.html?error=请输入用户名和密码");
+    header("Location: ../login.html?error=请输入用户名和密码");
     exit;
 }
 
@@ -49,11 +49,11 @@ if ($stmt->num_rows > 0) {
         header("Location: ./shipin/index.php"); // 重定向到登录后的页面
         exit;
     } else {
-        header("Location: login.html?error=密码错误");
+        header("Location: ../login.html?error=密码错误");
         exit;
     }
 } else {
-    header("Location: login.html?error=用户不存在");
+    header("Location: ../login.html?error=用户不存在");
     exit;
 }
 

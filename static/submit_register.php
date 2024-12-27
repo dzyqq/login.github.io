@@ -46,11 +46,11 @@ $stmt->bind_param("sss", $user_name, $user_email, $hashed_password);
 
 if ($stmt->execute()) {
     // 注册成功，重定向到登录页面
-    header("Location: login.html?message=注册成功，请登录");
+    header("Location: ../login.html?message=注册成功，请登录");
     exit;
 } else {
     // 如果注册失败，显示错误信息
-    header("Location: register.html?error=注册失败，请稍后再试");
+    header("Location: ../register.html?error=注册失败，请稍后再试");
     exit;
 }
 
